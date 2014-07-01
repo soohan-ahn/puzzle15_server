@@ -1,0 +1,11 @@
+<table>
+    <tbody>    
+    <% @scoretables.each do |f| %>
+        <tr>
+            <th><h1><%= f.name %></h1></th>
+            <th><h1><%= f.score %></h1></th>
+            <th><h1><%= f.id %></h1></th>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

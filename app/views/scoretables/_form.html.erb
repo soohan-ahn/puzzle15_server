@@ -1,0 +1,25 @@
+<%= form_for(@scoretable) do |f| %>
+  <% if @scoretable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scoretable.errors.count, "error") %> prohibited this scoretable from being saved:</h2>
+
+      <ul>
+      <% @scoretable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
